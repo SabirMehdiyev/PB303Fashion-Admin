@@ -1,0 +1,44 @@
+﻿@model Slider
+
+<div class="row">
+    <div class="col-md-6 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Default form</h4>
+                <p class="card-description">
+                    Create slider
+                </p>
+                <form class="forms-sample" method="post" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <label>SubText</label>
+                        <input asp-for="SubText" class="form-control" placeholder="name">
+                        <span asp-validation-for="SubText"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Content</label>
+                        <input asp-for="Content" class="form-control" placeholder="name">
+                        <span asp-validation-for="Content"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Content</label>
+                        <input asp-for="Content" class="form-control" placeholder="name">
+                        <span asp-validation-for="Content"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Description</label>
+                        <input asp-for="Description" class="form-control">
+                        <span asp-validation-for="Description"></span>
+                    </div>
+                    <div class="form-group">
+                        <label>Image</label>
+                        <input asp-for="ImageFile" class="form-control">
+                        <span asp-validation-for="ImageFile"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary mr-2">Create</button>
+                    <a class="btn btn-light" asp-action="index">Cancel</a>
+                </form>
+                <div asp-validation-summary="ModelOnly" ></div>
+            </div>
+        </div>
+    </div>
+</div>

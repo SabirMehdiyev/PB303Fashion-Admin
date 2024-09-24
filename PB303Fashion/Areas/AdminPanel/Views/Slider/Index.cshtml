@@ -1,0 +1,36 @@
+﻿@model List<Slider>
+
+<div class="col-lg-6 grid-margin stretch-card">
+    <div class="card">
+        <div class="card-body">
+            <h4 class="card-title">Sliders Table</h4>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Content</th>
+                            <th>SubText</th>
+                            <th>Description</th>
+                            <th>Image</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Content</td>
+                                <td>@item.SubText</td>
+                                <td>@item.Description</td>
+                                <td>@item.ImgUrl</td>
+                                <td>
+                                    <a asp-controller="slider" asp-action="create" class="btn btn-primary">Create</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
